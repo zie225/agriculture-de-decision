@@ -15,7 +15,7 @@ def analyse():
 		import pandas as pd
 		import numpy as np
 		# import os
-		data = pd.read_excel("data.xlsx", 'newData')
+		data = pd.read_excel("data.xlsx")
 		
 		data['N'] =  data.N.astype(float)
 		data['P'] =  data.P.astype(float)
