@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width , initial-scale=1.0" >
+  <meta name="description" content="Fertilizer Prediction">
+  <meta name="author" content="Mayank Singh">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></script>
+  <script type="text/javascript" href="{{ url_for('static',filename='bootstrap.min.js') }}" rel="stylesheet" media="screen"> </script>
+  <script type="text/javascript" href="{{ url_for('static',filename='login2_js.js') }}" rel="stylesheet" media="screen"></script>
+  
+  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></script>
+ <link href="{{ url_for('static',filename='styles/bootstrap.min.css') }}" rel="stylesheet" media="screen">
+  <link href="{{ url_for('static',filename='styles/login2_css.css') }}" rel="stylesheet" media="screen">
+  <link href="{{ url_for('static',filename='styles/index_css.css') }}" rel="stylesheet" media="screen">
+  <link href="{{ url_for('static',filename='styles/indexstyle.css') }}" rel="stylesheet" media="screen">
+</head>
+<body>
+
+<div class="container">
+  <nav class="navbar navbar-inverse  navbar-fixed-top" >
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">L'agriculture de précision</a>
+    </div>
+
+
+ </nav>
+ </div>
+<div id="map" style="width:100%;height:500px;margin-top:-40px">
+  <img src="{{url_for('static', filename='index.jpg')}}" width="1800px" height="500px">
+
+</div>
+
+
+<div class="wrapper container-fluid">
+  <div class="row well" style="min-height: 100px">
+
+<form action="/analyse" method="POST"> 
+    <div class="row" style="padding-bottom: 0.5em ; margin-left: -30px">
+      <div class = "col-md-2">
+        <div class="input-group">
+            <span class="input-group-addon">Nitrogen</i></span>
+            <input id="input_value3" type="text" class="form-control" name="Nitrogen" placeholder="Enter Nitrogen Value">
+          </div>
+        </div>
+
+      <div class = "col-md-3">
+        <div class="input-group">
+            <span class="input-group-addon">Phosphorous</i></span>
+            <input id="input_value2" type="text" class="form-control" name="Phosphorous" placeholder="Enter Phosphorous Value">
+          </div>
+        </div>
+
+      <div class ="col-md-2">
+        <div class="input-group">
+            <span class="input-group-addon">Potassium</i></span>
+            <input id="input_value1" type="text" class="form-control" name="Potassium" placeholder="Enter Potassium Value">
+          </div>
+      </div>
+      
+        <div class = "col-md-2">
+        <div class="input-group">
+            <span class="input-group-addon">pH</i></span>
+            <input id="input_value4" type="text" class="form-control" name="pH" placeholder="Enter pH Value">
+          </div>
+        </div>
+        <div class = "col-md-3">
+        <div class="input-group">
+            <span class="input-group-addon">Temperature</i></span>
+            <input id="input_value5" type="text" class="form-control" name="Temperature" placeholder="Enter Temperature Value">
+          </div>
+        </div>
+    </div>
+  </div>   
+</div>
+
+<div class="wrapper container-fluid" style="margin-bottom : 10px">
+  <div class="row">
+    <div class="col-md-12 text-right">
+       <!-- <button type="button" class="btn btn-primary nav_btn"><i class="fa fa-stop icn" aria-hidden="true"></i>Stop</button> -->
+      
+       <button type="submit" href="/analyse" class="btn btn-primary btn-lg btn-block" >Analyse</button>
+   </form>
+    
+    </div>
+  </div>
+</div>
+             
+	
+<!-- <div class="container footer"><i class="fa fa-copyright pull-center" aria-hidden="true" style="margin:3px"></i>NONE</div> -->
+
+
+      
+</body>
+</html>
+
+
+
+
