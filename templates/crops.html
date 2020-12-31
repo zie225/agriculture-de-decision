@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width , initial-scale=1.0" >
+  <meta name="description" content="Fertilizer Prediction">
+  <meta name="author" content="Mayank Singh">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	
+  <link href="{{ url_for('static',filename='login2_js.js') }}" rel="stylesheet" media="screen">
+  <script type="text/javascript" href="{{ url_for('static',filename='bootstrap.min.js') }}" rel="stylesheet" media="screen"> </script>
+
+  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></script>
+  <link href="{{ url_for('static',filename='styles/bootstrap.min.css') }}" rel="stylesheet" media="screen">
+  <link href="{{ url_for('static',filename='styles/login2_css.css') }}" rel="stylesheet" media="screen">
+  <link href="{{ url_for('static',filename='styles/index_css.css') }}" rel="stylesheet" media="screen">
+  <link href="{{ url_for('static',filename='styles/indexstyle.css') }}" rel="stylesheet" media="screen">
+</head>
+<body>
+  <div class="container">
+    <nav class="navbar navbar-inverse  navbar-fixed-top" >
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/index">L'agriculture de précision</a>
+      </div>
+  
+  
+   </nav>
+   </div>
+
+    
+
+<div class="container-fluid">
+
+{% if crop=="TOMATO" %}  
+ <div class="well container-fluid">
+  <center>
+    <img src="{{url_for('static', filename='tomato.jpg')}}" class="img-rounded" width="304" height="236">
+    <h2>Tomato Cultivation Guide  </h2>
+  </center>
+ 
+
+</div>
+
+
+{% endif %}
+
+
+{% if crop=="GARLIC" %}
+ 
+<div class="container-fluid">
+<center>
+    <img src="{{url_for('static', filename='garlic.jpg')}}" class="img-rounded" width="304" height="236" style="padding-bottom:1em ">
+    <h1> Garlic  </h1>
+
+  </center>
+
+</div>  
+{% endif%}
+
+{% if crop=="ONION" %}
+  <div class="container-fluid">
+    <center>
+      <img src="{{url_for('static', filename='onion.jpeg')}}" class="img-rounded" width="304" height="236" style="padding-bottom:1em ">
+      <h1><strong>Onions</strong>  </h1>
+    </center>
+
+
+  </div>
+
+  {% endif %}
+
+
+{% if crop=="ORANGE" %}
+<div class="container-fluid"> 
+<center>
+      <img src="{{url_for('static', filename='orange.jpeg')}}" class="img-rounded" width="304" height="236" style="padding-bottom:1em ">
+      <h2><strong>Orange </strong> </h2>
+
+    </center>
+</div>
+  {% endif %}
+
+  {% if crop=="PEAS" %}
+<div class="container-fluid"> 
+  <center>
+    <img src="{{url_for('static', filename='peas.jpg')}}" class="img-rounded" width="304" height="236" style="padding-bottom:1em ">
+    <h2><strong>Peas</strong> </h2> 
+  </center>
+  
+</div>
+
+  {% endif %} 
+  {% if crop=="POTATO" %}
+  <div class="well container-fluid">
+  <center>
+    <img src="{{url_for('static', filename='potato.jpg')}}" class="img-rounded" width="304" height="236" style="padding-bottom:1em ">
+    <h2>Potato  </h2>
+  </center>
+
+</div>
+  {% endif %} {% if crop=="RICE" %}
+  <center>
+    <img src="{{url_for('static', filename='rice.jpg')}}" class="img-rounded" width="304" height="236" style="padding-bottom:1em ">
+    <h2>RICE  </h2>
+  </center>
+
+  {% endif %}
+
+
+  {% if crop=="SUGARCANE" %}
+  <div class="container-fluid well">
+
+  <center>
+    <img src="{{url_for('static', filename='sugarcane.jpg')}}" class="img-rounded" width="304" height="236" style="padding-bottom:1em ">
+    <h2>Sugarcane  </h2>
+  </center>
+
+  </div>
+  
+  {% endif %} 
+
+
+  {% if crop=="GARLIC" %}
+
+  <div class="container-fluid">
+    <center>
+      <img src="{{url_for('static', filename='garlic.jpg')}}" class="img-rounded" width="304" height="236" style="padding-bottom:1em ">
+      <h2>GARLIC  </h2>
+    </center>
+
+  </div>
+
+  {% endif%}
+
+<!-- <div class="container footer"><i class="fa fa-copyright pull-center" aria-hidden="true" style="margin:3px"></i>NONE</div> -->
+{% if crop1==1 %}
+<div class="well"><h3>2.GARLIC</h3></div>
+{% endif %}
+{% if crop1==2 %}
+<div class="well"><h3>2.ONION </h3></div>
+{% endif %}
+{% if crop1==3 %}
+<div class="well"><h3>2.ORANGE </h3></div>
+{% endif %}
+{% if crop1==4 %}
+<div class="well"><h3>2.PEAS </h3></div>
+{% endif %}
+{% if crop1==5 %}
+<div class="well"><h3>2.POTATO </h3></div>
+{% endif %}
+{% if crop1==6 %}
+<div class="well"><h3>2.RICE </h3></div>
+{% endif %}
+{% if crop1==7 %}
+<div class="well"><h3>2.TOMATO </h3></div>
+{% endif %}
+{% if crop1==8 %}
+<div class="well"><h3>2.SUGARCANE </h3></div>
+{% endif %}
+
+{% if crop2==1 %}
+<div class="well"><h3>3.GARLIC  </h3></div>
+{% endif %}
+{% if crop2==2 %}
+<div class="well"><h3>3.ONION  </h3></div>
+{% endif %}
+{% if crop2==3 %}
+<div class="well"><h3>3.ORANGE  </h3></div>
+{% endif %}
+{% if crop2==4 %}
+<div class="well"><h3>3.PEAS  </h3></div>
+{% endif %}
+{% if crop2==5 %}
+<div class="well"><h3>3.POTATO  </h3></div>
+{% endif %}
+{% if crop2==6 %}
+<div class="well"><h3>3.RICE  </h3></div>
+{% endif %}
+{% if crop2==7 %}
+<div class="well"><h3>3.TOMATO  </h3></div> 
+{% endif %}
+{% if crop2==8 %}
+<div class="well"><h3>3.SUGARCANE  </h3></div>
+{% endif %}
+
+<form method="POST" action="/users/analyse/predict">
+<button type="submit" href="/users/analyse/predict" class="btn btn-primary nav_btn" ><i class="fa fa-play icn" aria-hidden="true"></i>Predict Bio-Fertilizer</button>
+</div>
+
+</body>
+</html>
